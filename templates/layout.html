@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='site.css')}}" />
+
+
+
+</head>
+
+<body>
+
+    <h1 style="color: grey;text-align: center;font-family:Bangla MN;"><strong>Welcome to your Member Management
+            Website</strong></h1>
+
+    <div class="navbar">
+        <a href="{{ url_for('home') }}" class="navbar-brand">HOME</a>
+        <a href="{{ url_for('kid') }}" class="navbar-item">YOUTH</a>
+        <a href="{{ url_for('adult') }}" class="navbar-item">ADULT</a>
+    </div>
+
+    <img src="{{ url_for('static', filename='night.jpg') }}" 
+        style="background-repeat: no-repeat; 
+        width:100%;height:100%;
+        background-attachment: fixed;" 
+    />
+
+    <div class="body-content">
+        {% block content %}
+        {% endblock %}
+        <hr />
+        <footer>
+            <p>© 2021</p>
+        </footer>
+    </div>
+</body>
+
+</html>

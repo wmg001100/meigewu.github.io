@@ -1,0 +1,5 @@
+dbuser = "postgres"
+dbpass = "wmg001100" #"PUT YOUR PASSWORD HERE"
+dbhost = "comp636.cenh4tzl9jds.us-east-1.rds.amazonaws.com" #"PUT YOUR AWS Connect String here"
+dbport = "5432"
+dbname = "postgres"

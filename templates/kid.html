@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <title>kid</title>
+</head>
+
+<body>
+    <h1 style="color: grey;text-align: center"><strong>check your information</strong></h1>
+
+    <img src="{{ url_for('static', filename='kidnight1.jpg') }}" style="background-repeat: no-repeat; 
+        width:100%;height:100%;
+        background-attachment: fixed;" />
+
+    <table class="table table-success table-striped">
+
+
+    <button onclick="window.open('http://127.0.0.1:5000/visitor/update')">Sign in here</button>
+    <button onclick="window.open('http://127.0.0.1:5000' )">Return Home</button>
+        <thead>
+            <tr>
+                {% for col in kidcols %}
+                <th>{{col}}</th>
+                {% endfor %}
+            </tr>
+        </thead>
+        {# this is a comment the line below prints the kid result #}
+        <tbody>
+            {% for result in kid %}
+            <tr>
+
+                {% for entry in result %}
+                <td>{{entry}}</td>
+                {% endfor %}
+
+                {% endfor %}
+            </tr>
+
+
+        </tbody>
+    </table>
+
+</body>
+
+</html>

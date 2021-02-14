@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='site.css')}}" />
+    <title>New Night</title>
+</head>
+
+<body>
+
+    <h1 style="color: grey;text-align: center">New Activitynight</h1>
+    <img src="{{ url_for('static', filename='eye.jpg') }}" style="background-repeat: no-repeat; 
+        width:100%;height:100%;
+        background-attachment: fixed;" />
+
+
+
+    <style>
+        fieldset {
+            background-color: lightcyan;
+        }
+
+        legend {
+            background-color: gray;
+            color: white;
+            padding: 5px 10px;
+        }
+
+        input {
+            margin: 6px;
+        }
+    </style>
+
+
+
+    <form action="/addnight" method="POST">
+
+        <fieldset id="addnight">
+
+            <label for="groupid">Group Id:</label>
+            <input type="text" id="groupid" name="groupid" /> <br />
+            <label for="nighttitle">Night Title:</label>
+            <input type="text" id="nighttitle" name="nighttitle" /> <br />
+            <label for="description">Description:</label>
+            <input type="text" id="description" name="description" /> <br />
+            <label for="activitynightdate">Activity Night Date:</label>
+            <input type="text" id="activitynightdate" name="activitynightdate" /> <br />
+            <input type="submit" />
+            <input type="reset" />
+        </fieldset>
+    </form>
+
+</body>
+
+</html>
